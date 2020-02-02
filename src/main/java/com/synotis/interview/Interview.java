@@ -1,8 +1,9 @@
 package com.synotis.interview;
 
 
-import java.util.ArrayList;
+import java.math.BigDecimal;
 import java.util.List;
+import java.util.Map;
 
 public class Interview {
 
@@ -46,6 +47,15 @@ public class Interview {
 
 
     public boolean containTalendInList(List<String> list) {
-       throw  new UnsupportedOperationException();
+        throw new UnsupportedOperationException();
+    }
+
+
+    public BigDecimal add(int a, int b) {
+        throw new UnsupportedOperationException();
+    }
+
+    public Map<Integer, String> createMap(String val1, String val2) {
+        throw new UnsupportedOperationException();
     }
 }

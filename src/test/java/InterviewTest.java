@@ -4,8 +4,9 @@ import com.synotis.interview.Fish;
 import com.synotis.interview.Interview;
 import org.junit.Test;
 
-import java.util.ArrayList;
+import java.math.BigDecimal;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -48,6 +49,10 @@ public class InterviewTest {
         assertEquals("tata", replaceString);
     }
 
+
+    /**
+     * à l'aide un StringBuilder
+     */
     @Test
     public void testReverse1() {
         Interview interview = new Interview();
@@ -56,6 +61,9 @@ public class InterviewTest {
     }
 
 
+    /**
+     * à l'aide d'un tableau
+     */
     @Test
     public void testReverse2() {
         Interview interview = new Interview();
@@ -80,7 +88,7 @@ public class InterviewTest {
     }
 
     @Test
-    public void testDate() {
+    public void testDateFormat() {
         Interview interview = new Interview();
         String formattedDate = interview.getFormattedDate("1999-02-02");
         assertEquals(formattedDate, "02-02-1999");
@@ -105,4 +113,26 @@ public class InterviewTest {
         assertEquals("swim", animal.move());
 
     }
+
+    @Test
+    public void testMap() {
+        Interview interview = new Interview();
+        Map<Integer, String> map = interview.createMap("Patoche", "Seb");
+
+        assertEquals(map.get(1), "Patoche");
+        assertEquals(map.get(2), "Seb");
+
+
+    }
+
+    @Test
+    public void add() {
+        int a = 4;
+        int b = 5;
+        Interview interview = new Interview();
+        BigDecimal result = interview.add(a, b);
+        assertEquals(BigDecimal.valueOf(9), result);
+
+    }
+
 }
